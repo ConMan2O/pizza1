@@ -7,7 +7,7 @@ const app = express();
 
 // Define a port number for
 // our server to listen on
-const PORT = 3000;
+const PORT = 3005;
 
 //create an array to store pizza orders
 const orders = [];
