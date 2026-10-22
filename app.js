@@ -46,11 +46,18 @@ app.post('/submit-order', (req, res) => {
     order['timestamp'] = new Date();
 
     console.log(order);
+
     orders.push(order);
-    
+    console.log(orders);
+
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 
 
+});
+
+// Add an admin route
+app.get('/admin', (req, res) => {
+    res.send(orders);
 });
 
 // Start the server on the designated port
